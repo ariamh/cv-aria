@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Logo from './Logo';
 
 function App() {
 	return (
@@ -8,6 +9,7 @@ function App() {
 
 				{/* Header Section (Tanpa Card, agar clean di atas) */}
 				<header className="main-header">
+					<Logo size={120} />
 					<h1 className="name">ARIA MUSTOFA HIDAYAT</h1>
 					<h2 className="role">BACKEND ENGINEER</h2>
 					<div className="contact-info">
