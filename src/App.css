@@ -1,38 +1,236 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+/* === GLOBAL SETTINGS === */
+* {
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	background-color: #f3f4f6;
+	/* Warna background modern (Light Grey) */
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	color: #333;
+	-webkit-font-smoothing: antialiased;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-container {
+	display: flex;
+	justify-content: center;
+	padding: 40px 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.content-wrapper {
+	width: 100%;
+	max-width: 850px;
+	/* Lebar optimal untuk dibaca */
 }
 
-.App-link {
-  color: #61dafb;
+/* === HEADER (Top Section) === */
+.main-header {
+	text-align: center;
+	margin-bottom: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.name {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2.95rem;
+	font-weight: 800;
+	/* Extra Bold */
+	color: #1a1a1a;
+	margin: 0;
+	letter-spacing: 2px;
+	line-height: 1.2;
+}
+
+.role {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2.3rem;
+	font-weight: 700;
+	color: #444;
+	margin: 10px 0 15px 0;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+}
+
+.contact-info {
+	font-size: 0.93rem;
+	color: #555;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+.separator {
+	margin: 0 5px;
+	color: #999;
+}
+
+/* === CARD STYLE (Kotak Putih) === */
+.card {
+	background-color: #ffffff;
+	border-radius: 12px;
+	/* Sudut melengkung */
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+	/* Shadow halus */
+	padding: 30px 40px;
+	margin-bottom: 25px;
+	border: 1px solid #e5e7eb;
+	/* Border tipis agar lebih tajam */
+}
+
+/* Section Title di dalam Card */
+.section-title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.1rem;
+	font-weight: 700;
+	color: #111;
+	text-transform: uppercase;
+	margin: 0 0 20px 0;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #eee;
+	/* Garis pemisah di bawah judul */
+	letter-spacing: 1px;
+}
+
+/* === CONTENT TYPOGRAPHY === */
+
+/* Summary */
+.summary-text {
+	text-align: justify;
+	line-height: 1.7;
+	color: #4b5563;
+	margin: 0;
+}
+
+/* Competencies List */
+.competencies-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.competencies-list li {
+	margin-bottom: 12px;
+	display: flex;
+	align-items: flex-start;
+}
+
+/* Bullet Custom (Titik Hitam) */
+.competencies-list li::before {
+	content: "•";
+	color: #111;
+	font-weight: bold;
+	font-size: 1.2rem;
+	line-height: 1rem;
+	margin-right: 12px;
+}
+
+.comp-label {
+	font-weight: 700;
+	color: #111;
+	min-width: 140px;
+	/* Lebar label agar rapi sejajar */
+	display: inline-block;
+}
+
+.comp-value {
+	color: #4b5563;
+}
+
+/* Experience Items */
+.job-item {
+	margin-bottom: 30px;
+}
+
+.job-item:last-child {
+	margin-bottom: 0;
+}
+
+.job-header {
+	display: flex;
+	align-items: baseline;
+	flex-wrap: wrap;
+	margin-bottom: 4px;
+}
+
+.company {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1rem;
+	font-weight: 700;
+	color: #111;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.location {
+	font-style: italic;
+	color: #666;
+	font-weight: 400;
+}
+
+.job-role {
+	font-weight: 700;
+	/* Bold untuk posisi */
+	color: #222;
+	font-size: 1rem;
+	margin-bottom: 4px;
+}
+
+.date-range {
+	font-size: 0.9rem;
+	color: #666;
+	font-weight: 600;
+	margin-bottom: 12px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.job-details {
+	margin: 0;
+	padding-left: 20px;
+}
+
+.job-details li {
+	margin-bottom: 6px;
+	line-height: 1.6;
+	color: #4b5563;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+	.name {
+		font-size: 1.8rem;
+	}
+
+	.role {
+		font-size: 1rem;
+		letter-spacing: 2px;
+	}
+
+	.card {
+		padding: 20px;
+	}
+
+	.job-header {
+		flex-direction: column;
+	}
+
+	.hidden-mobile {
+		display: none;
+	}
+
+	.competencies-list li {
+		flex-direction: column;
+	}
+
+	.competencies-list li::before {
+		display: none;
+	}
+
+	/* Hapus bullet di HP agar hemat tempat */
+	.comp-label {
+		margin-bottom: 2px;
+		text-decoration: underline;
+	}
 }
