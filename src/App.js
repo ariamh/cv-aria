@@ -46,7 +46,7 @@ function App() {
 							<span className="comp-value">PostgreSQL, MySQL, MongoDB, Redis (Caching Strategy)</span>
 						</li>
 						<li>
-							<span className="comp-label">Infrastructure & DevOps</span>
+							<span className="comp-label">Infra & DevOps</span>
 							<span className="comp-value">Docker, CI/CD (GitLab/Github), Linux</span>
 						</li>
 						<li>
