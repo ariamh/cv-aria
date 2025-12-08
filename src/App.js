@@ -11,7 +11,14 @@ function App() {
 					<h1 className="name">ARIA MUSTOFA HIDAYAT</h1>
 					<h2 className="role">BACKEND ENGINEER</h2>
 					<div className="contact-info">
-						<span>ariamustofa@gmail.com</span>
+						<span>
+							<a 
+								href="mailto:ariamustofa@gmail.com" 
+								className="contact-link"
+							>
+								ariamustofa@gmail.com
+							</a>
+						</span>
 						<span className="separator">|</span>
 						<span>085324082999</span>
 						<span className="separator">|</span>
