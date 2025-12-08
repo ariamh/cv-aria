@@ -15,7 +15,15 @@ function App() {
 						<span className="separator">|</span>
 						<span>085324082999</span>
 						<span className="separator">|</span>
-						<span>LinkedIn</span>
+						<span>
+							<a 
+								href="https://www.linkedin.com/in/aria-mustofa-hidayat-b86a4b61/" 
+								target="_blank" 
+								rel="noopener noreferrer" 
+							>
+								LinkedIn
+							</a>
+						</span>
 						<span className="separator">|</span>
 						<span>Tangerang</span>
 					</div>
